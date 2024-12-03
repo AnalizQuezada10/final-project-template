@@ -1,0 +1,186 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    --primary-color: #000;
+    --secondary-color: #3498db;
+    --secondary-color: #e74c3c;
+    --background-color: #800080;
+    --text-color: #f4ebeb;
+    --light-text: #ffffff;
+    
+    /*Typography */
+    --main-font: 'Roboto', sans-serif;
+    --heading-font: 'Playfair Display', serif;
+
+    /*Spacing*/
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 2rem;
+}
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+
+}
+/*Typography */
+h1,h2,h3 {
+    font-family: var(--heading-font);
+    margin-bottom: var(--spacing-md);
+    color:var(--primary-color);
+    }
+    h1{
+        font-size: 2.5rem;
+        font-weight: 700;
+
+    }
+    h2{
+        font-size: 2rem;
+        font-weight: 600;
+    }
+    h3{
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+    .header {
+        background-color: var(--primary-color);
+        color: var(--light-text);
+        padding: var(--spacing-md);
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .logo{
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+    .navigation{
+        display: flex;
+        gap: var(--spacing-md);
+    }
+    .nav-link{
+        color: var(--light-text);
+        text-decoration: none;
+        transition: color 0.2s ease;
+
+    }
+    .nav-link:hover {
+        color: var(--secondary-color);
+
+    }
+    .product-grid{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minimax(250px, 1fr));
+        gap: var(--spacing-lg);
+        padding: var(--spacing-lg);
+    }
+    .product-card {
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition:transform 0.3s ease;
+    }
+    .product-card:hover {
+        transform: scale(1.05);
+    }
+    .product-image {
+        width: 100%;
+        height:250px;
+        object-fit: cover;
+    }
+    .product-details{
+        padding: var(--spacing-md);
+    }
+    .product-title {
+        font-size: 1.2rem;
+        margin-bottom: var(--spacing-md);
+    }
+    .product-price{
+        font-weight: 600;
+        color: var(--accent-color);
+
+    }
+    /*Buttons */
+    .btn {
+        display: inline-block;
+        padding: var(--spacing-md) var(--spacing-md);
+        background-color: var(--secondary-color);
+        color: var(--light-text);
+        border: none;
+        border-radius: 4px;
+        text-decoration: none;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+    }
+    .btn:hover {
+        background-color: var(--primary-color);
+    }
+    .btn-primary{
+        background-color: var(--primary-color);
+    }
+    .btn-secondary{
+        background-color: var(--accent-color);
+    }
+    .cart {
+        background-color: #ffffff;
+        border-radius: 10px;
+        padding: var(--spacing-md);
+        box-shadow: 0 4px 6px rgba(0, 0, 0 0.1);
+    }
+    .cart-item{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 1px solid #e0e0;
+        padding: var(--spacing-sm) 0;
+    }
+    @media screen and (max-width: 500px) {
+        .header {
+            flex-direction: column;
+            text-align: center;
+        }
+        .navigation{
+            margin-top: var(--spacing-md);
+            flex-direction: column;
+            align-items: center;
+        }
+        .product-grid{
+            grid-template-columns:  1fr;
+        }
+        h1{
+            font-size: 2rem;
+        }
+        h2{
+            font-size: 1.5rem;
+
+        }
+        .form-control {
+            width: 100%;
+            padding: var(--spacing-sm);
+            margin-bottom: var(--spacing-md);
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .footer{
+            background-color: var(--primary-color);
+            color: var(--light-text);
+            text-align: center;
+            padding: var(--spacing-lg);
+        }
+        .text-center{
+            text-align: center;
+        }
+        .container{
+            max-width: 180px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-md);
+        }
+    }
+    
